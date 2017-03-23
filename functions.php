@@ -27,3 +27,22 @@ add_action('wp_enqueue_scripts', 'wireframe_scripts');
 add_theme_support( 'custom-logo' );
 add_theme_support( 'get-the-image' );
 add_theme_support( 'breadcrumb-trail' );
+
+/**
+ * Registers sidebars.
+ *
+ * @since  0.1.0.0
+ * @access public
+ * @return void
+ */
+function wireframe_register_sidebars() {
+
+	hybrid_register_sidebar(
+		array(
+			'id'          => 'primary',
+			'name'        => _x( 'Primary', 'sidebar', 'wireframe' )
+		)
+	);
+}
+# Register sidebars.
+add_action( 'widgets_init', 'wireframe_register_sidebars', 5 );

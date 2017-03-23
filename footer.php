@@ -1,3 +1,5 @@
+		<?php hybrid_get_sidebar( 'primary' ); ?>
+
 		<footer <?php hybrid_attr( 'footer' ); ?>>
 
 				<p class="credit">
