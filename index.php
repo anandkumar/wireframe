@@ -19,7 +19,7 @@ get_header(); // Loads the header.php template. ?>
 
 			<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
 
-			<?php if ( is_singular() ) : // If viewing a single post/page/CPT. ?>
+			<?php if ( is_singular() ) : // If viewing singular. ?>
 
 				<?php comments_template( '', true ); // Loads the comments.php template. ?>
 
@@ -28,6 +28,24 @@ get_header(); // Loads the header.php template. ?>
 		<?php endwhile; // End found posts loop. ?>
 
 	<?php endif; // End check for posts. ?>
+	
+	<?php if ( is_singular( 'post' ) ) : // If viewing a single post page. ?>
+
+	<div class="loop-nav">
+		<?php previous_post_link( '<div class="prev">' . __( 'Previous Post: %link', 'wireframe' ) . '</div>', '%title' ); ?>
+		<?php next_post_link(     '<div class="next">' . __( 'Next Post: %link',     'wireframe' ) . '</div>', '%title' ); ?>
+	</div><!-- .loop-nav -->
+
+	<?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results. ?>
+
+		<?php the_posts_pagination(
+			array(
+				'prev_text' => _x( '&larr; Previous', 'posts navigation', 'wireframe' ),
+				'next_text' => _x( 'Next &rarr;',     'posts navigation', 'wireframe' )
+			)
+		); ?>
+
+	<?php endif; // End check for type of page being viewed. ?>
 
 </main>
 

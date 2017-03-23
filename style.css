@@ -10,3 +10,17 @@
  * License:     GNU General Public License v2.0 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+/* Wireframe */
+body,
+#header,
+#footer,
+#content {
+	border: 1px solid;
+}
+
+#container {
+    border: 1px solid #666;
+    max-width: 1280px;
+    margin: 0 auto;
+}
