@@ -6,7 +6,7 @@
  * @link       http://webelements.io/themes/wireframe/
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-
+?>
 <?php get_header(); // Loads the header.php template. ?>
 
 <?php get_footer(); // Loads the footer.php template. ?>
