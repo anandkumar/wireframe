@@ -12,15 +12,39 @@
  */
 
 /* Wireframe */
+body {
+	margin: 0 auto;
+}
+
 body,
 #header,
 #footer,
-#content {
-	border: 1px solid;
+#content,
+.sidebar,
+.navigation {
+	border: 1px solid #999;
+    padding: 20px;
 }
 
 #container {
     border: 1px solid #666;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+#content {
+    width: 67%;
+}
+
+#sidebar-primary {
+    width: 33%;
+}
+
+#header,
+#footer,
+article {
+	border: 1px solid #999;
+    margin-bottom: 20px;
+	padding: 20px;
 }

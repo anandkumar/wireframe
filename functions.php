@@ -18,8 +18,8 @@ new Hybrid();
 // Enqueue a few scripts
 function wireframe_scripts() {
 	
-	wp_enqueue_style( 'hybrid-style' );
 	wp_enqueue_style( 'normalize', trailingslashit( get_template_directory_uri() ) . "css/normalize.css" );
+	wp_enqueue_style( 'hybrid-style' );
  
 }
 add_action('wp_enqueue_scripts', 'wireframe_scripts');
